@@ -1,9 +1,6 @@
 // Google fonts
 
 // Functions
-@import "functions/strip-unit";
-@import "functions/em";
-@import "functions/rem";
 @import "functions/tint";
 @import "functions/shade";
 
@@ -11,9 +8,6 @@
 @import "common/variables";
 
 // Mixins
-@import "mixins/respond";
-@import "mixins/orientation";
-@import "mixins/clearfix";
 
 // Base
 @import "base/reset";
@@ -21,7 +15,6 @@
 @import "base/typography";
 
 // Components
-@import "components/container";
 @import "components/separator";
 @import "components/icon";
 
