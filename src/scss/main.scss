@@ -12,7 +12,11 @@
 // Base
 @import "base/reset";
 @import "base/global";
+@import "base/typography";
 
 // Components
 @import "components/separator";
 @import "components/icon";
+
+// Utilities
+@import "utilities/utilities";
