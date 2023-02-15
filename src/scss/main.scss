@@ -1,6 +1,9 @@
 // Google fonts
 
 // Functions
+@import "functions/strip-unit";
+@import "functions/em";
+@import "functions/rem";
 @import "functions/tint";
 @import "functions/shade";
 
@@ -18,6 +21,7 @@
 @import "base/typography";
 
 // Components
+@import "components/container";
 @import "components/separator";
 @import "components/icon";
 
