@@ -1,0 +1,22 @@
+{
+  "name": "jan-sura.cz",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jsuradesign/jan-sura.cz"
+  },
+  "author": "Jan Sůra <info@jsuradesign.cz>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --emptyOutDir",
+    "preview": "vite preview"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "sass": "^1.58.1",
+    "vite": "^4.1.1",
+    "vite-plugin-nunjucks": "^0.1.10"
+  }
+}
