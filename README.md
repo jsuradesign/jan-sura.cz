@@ -1,1 +1,3 @@
-# jan-sura.cz
+# Jan Sůra
+
+> My personal website - In progress
