@@ -8,6 +8,9 @@
 @import "common/variables";
 
 // Mixins
+@import "mixins/respond";
+@import "mixins/orientation";
+@import "mixins/clearfix";
 
 // Base
 @import "base/reset";
