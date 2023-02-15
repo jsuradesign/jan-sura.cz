@@ -40,7 +40,14 @@ export default defineConfig({
     },
     plugins: [
         nunjucks({
-            templatesDir: resolve(__dirname, "src/html")
+            templatesDir: resolve(__dirname, "src/html"),
+            variables: {
+                "index.html": {
+                    siteName: "Jan Sůra",
+                    version: pkg.version,
+                    repoUrl: pkg.repository.url
+                }
+            }
         }),
     ]
 });
