@@ -1,0 +1,41 @@
+:root {
+  @each $color-name, $color in $colors-plate {
+    --#{$color-name}: #{$color};
+
+    @for $i from 1 through 4 {
+      --#{$color-name}-#{$i *100}: #{shade($color, $i * 20)};
+      --#{$color-name}-n-#{$i *100}: #{tint($color, $i * 20)};
+    }
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --primary: #{$primary-light};
+    --body-bg: #{$light};
+    --body-color: #{$dark};
+
+    @for $i from 1 through 4 {
+      --primary-#{$i *100}: #{shade($primary-light, $i * 20)};
+      --primary-n-#{$i *100}: #{tint($primary-light, $i * 20)};
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary: #{$primary-dark};
+    --body-bg: #{$dark};
+    --body-color: #{$light};
+
+    @for $i from 1 through 4 {
+      --primary-#{$i *100}: #{shade($primary-dark, $i * 20)};
+      --primary-n-#{$i *100}: #{tint($primary-dark, $i * 20)};
+    }
+  }
+}
+
+body {
+  background: var(--body-bg);
+  color: var(--body-color);
+}
