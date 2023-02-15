@@ -11,3 +11,9 @@ $colors-plate: (
   light: $light,
   dark: $dark,
 );
+
+$z-index: (
+  negative: -1,
+  zero: 0,
+  one: 1,
+);
