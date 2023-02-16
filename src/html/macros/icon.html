@@ -1,5 +1,7 @@
 {% macro icon(file, size, color, class) %}
-<svg class="icon {% if class %}{{ class }}{% endif %} icon--{{ file }} {% if color %}icon--{{ color }}{% endif %}" role="img" {% if size %} width="{{ size }}" height="{{ size }}" {% endif%}>
-  <use xlink:href="../images/icon-sprite.svg#{{ file }}" />
-</svg>
+<span class="icon-wrap">
+  <svg class="icon {% if class %}{{ class }}{% endif %} icon--{{ file }} {% if color %}icon--{{ color }}{% endif %}" role="img" {% if size %} width="{{ size }}" height="{{ size }}" {% endif%}>
+    <use xlink:href="images/icon-sprite.svg#{{ file }}" />
+  </svg>
+</span>
 {% endmacro %}
