@@ -22,6 +22,52 @@ $grid-breakpoints: (
   xxl: 1600px,
 );
 
+$spacer: 1rem;
+$spacer-x: $spacer;
+$spacer-y: $spacer;
+$spacers: (
+  0: (
+    x: 0,
+    y: 0,
+  ),
+  1: (
+    x: (
+      $spacer-x * 0.25,
+    ),
+    y: (
+      $spacer-y * 0.25,
+    ),
+  ),
+  2: (
+    x: (
+      $spacer-x * 0.5,
+    ),
+    y: (
+      $spacer-y * 0.5,
+    ),
+  ),
+  3: (
+    x: $spacer-x,
+    y: $spacer-y,
+  ),
+  4: (
+    x: (
+      $spacer-x * 1.5,
+    ),
+    y: (
+      $spacer-y * 1.5,
+    ),
+  ),
+  5: (
+    x: (
+      $spacer-x * 3,
+    ),
+    y: (
+      $spacer-y * 3,
+    ),
+  ),
+);
+
 $z-index: (
   negative: -1,
   zero: 0,
@@ -38,3 +84,5 @@ $font-museo: "MuseoModerno", cursive;
 
 $font-size-base: 16px;
 $line-height-base: 1.6;
+$font-weight-normal: normal;
+$font-weight-bold: bold;
