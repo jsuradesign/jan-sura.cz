@@ -6,8 +6,10 @@ import nunjucks from "vite-plugin-nunjucks"
 import pkg from "./package.json"
 
 export default defineConfig({
+    base: "./",
     root: resolve(__dirname, "src"),
     build: {
+        minify: false,
         outDir: resolve(__dirname, "dist"),
         sourcemap: true,
         copyPublicDir: true,

@@ -12,13 +12,14 @@ $colors-plate: (
   dark: $dark,
 );
 
-$breakpoints: (
-  xs: em(320px),
-  sm: em(480px),
-  md: em(768px),
-  lg: em(992px),
-  xl: em(1200px),
-  xxl: em(1600px),
+$grid-breakpoints: (
+  tiny: 0px,
+  xs: 320px,
+  sm: 480px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1600px,
 );
 
 $z-index: (
@@ -29,6 +30,11 @@ $z-index: (
   reading-progress: 101,
   modal: 102,
 );
+
+$font-serif: "Playfair Display", serif;
+$font-sans: "Source Sans Pro", sans-serif;
+$font-syne: "Syne", sans-serif;
+$font-museo: "MuseoModerno", cursive;
 
 $font-size-base: 16px;
 $line-height-base: 1.6;

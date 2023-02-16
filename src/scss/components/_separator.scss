@@ -1,12 +1,22 @@
 .separator {
+  display: block;
+  margin-bottom: 8px;
+
   &::before {
-    content: "";
+    content: none;
+  }
+
+  @include respond-up(md) {
     display: inline-block;
-    width: 2px;
-    height: 12px;
-    margin-left: 8px;
-    margin-right: 8px;
-    transform: rotate(15deg);
-    background: var(--gray);
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 2px;
+      height: 12px;
+      margin-left: 8px;
+      margin-right: 8px;
+      transform: rotate(15deg);
+      background: var(--gray);
+    }
   }
 }

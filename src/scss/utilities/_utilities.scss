@@ -6,3 +6,53 @@
 .text-right {
   text-align: right;
 }
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.fw-bolder {
+  font-weight: 900;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.left-0 {
+  left: 0;
+}
+
+.right-0 {
+  right: 0;
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include respond-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .d#{$infix}-none {
+      display: none !important;
+    }
+    .d#{$infix}-block {
+      display: block !important;
+    }
+    .d#{$infix}-inline-block {
+      display: inline-block !important;
+    }
+    .d#{$infix}-flex {
+      display: flex !important;
+    }
+    .d#{$infix}-inline-flex {
+      display: inline-flex !important;
+    }
+  }
+}

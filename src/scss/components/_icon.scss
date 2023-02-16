@@ -1,9 +1,13 @@
+.icon-wrap {
+  display: inline-block;
+}
 .icon {
+  display: inline-block;
   &--body-color {
-    fill: var(--body-color);
+    fill: var(--body-color) !important;
   }
 
   &--primary {
-    fill: var(--primary);
+    fill: var(--primary) !important;
   }
 }

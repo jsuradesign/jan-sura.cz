@@ -1,11 +1,10 @@
 .container {
   max-width: 90%;
+  width: 100%;
   margin: 0 auto;
   display: block;
-  border: 1px solid red;
 
   @include respond-up(md) {
     max-width: 80%;
-    border: 1px solid green;
   }
 }
