@@ -4,10 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{ siteName }}</title>
+    <title>{{ siteName }} - {{ siteDescription }}</title>
+    <link rel="icon" href="favicon-dark.ico" type="image/x-icon" />
+    <meta name="theme-color" content="#dfe4ed" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#101828" media="(prefers-color-scheme: dark)" />
   </head>
   <body>
-    <header class="sticky sticky--top bg-body-bg">{% include "src/html/partials/header.html" %}</header>
+    <header class="bg-body-bg">{% include "src/html/partials/header.html" %}</header>
     <main>{% block content %}{% endblock %}</main>
     <footer>{% include "src/html/partials/footer.html" %}</footer>
     <script type="module" src="js/main.js"></script>

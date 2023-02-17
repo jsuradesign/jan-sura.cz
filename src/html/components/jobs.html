@@ -1,0 +1,18 @@
+{% import 'src/html/macros/icon.html' as icon %}
+<div class="d-flex flex-wrap flex-row justify-content-between grid__jobs">
+  {% for job in jobs | reverse %}
+  <article class="job-item">
+    <header>
+      <div class="icons">
+        {% for icons in job.icons | reverse %} {{ icon.icon(icons.file, "24", "body-color", "svg-icon") }} {% endfor %}
+      </div>
+      <div class="job job__position"><h3>{{ job.position }}</h3></div>
+    </header>
+    <div class="d-flex flex-col">
+      <p class="job job__company">&bull; {{ job.company }}</p>
+      <p class="job job__duration">&bull; {{ job.duration }}</p>
+    </div>
+    <div class="job job__id">#{{ job.id }}</div>
+  </article>
+  {% endfor %}
+</div>

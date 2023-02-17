@@ -1,0 +1,11 @@
+{% import 'src/html/macros/icon.html' as icon %}
+
+<ul class="container social-links">
+  {% for link in socialLinks %}
+  <li>
+    <a href="{{ link.url }}" title="Jan Sůra - {{ link.title }}" target="_blank" class="no-border">
+      {{ icon.icon(link.icon, "24", "body-color", "svg-icon") }}
+    </a>
+  </li>
+  {% endfor %}
+</ul>
