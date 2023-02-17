@@ -48,9 +48,18 @@ a {
   text-decoration: none;
   color: var(--body-color);
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: var(--primary);
     transition: color var(--transition-duration) linear;
+  }
+
+  &:active {
+    color: var(--primary-300);
+  }
+
+  &:visited {
+    color: var(--body-color);
   }
 }
 

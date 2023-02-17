@@ -1,0 +1,17 @@
+.social-links {
+  display: flex;
+  flex-direction: row;
+
+  li {
+    margin-left: 12px;
+
+    &:nth-child(1) {
+      margin-left: 0;
+    }
+
+    a {
+      padding: 12px;
+      display: inline-flex;
+    }
+  }
+}

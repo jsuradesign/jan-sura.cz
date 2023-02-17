@@ -1,5 +1,4 @@
 // Google fonts
-@import url("https://fonts.googleapis.com/css2?family=MuseoModerno:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&family=Syne:wght@400;500;600;700;800&display=swap");
 
 // Functions
 @import "functions/strip-unit";
@@ -14,7 +13,9 @@
 // Mixins
 @import "mixins/respond";
 @import "mixins/orientation";
+@import "mixins/fluid-type";
 @import "mixins/clearfix";
+@import "mixins/selection";
 
 // Base
 @import "base/reset";
@@ -24,8 +25,44 @@
 // Components
 @import "components/container";
 @import "components/navigation";
+@import "components/jobs";
 @import "components/separator";
 @import "components/icon";
+@import "components/social-links";
+@import "components/animations";
+
+// Partials
+@import "partials/header";
+@import "partials/footer";
+
+// Sections
+@import "sections/hero";
+
+// Pages
+@import "pages/home";
 
 // Utilities
 @import "utilities/utilities";
+
+// Print styles
+@import "base/print";
+
+.phone-wrapper {
+  //   border: 1px solid red;
+  //   max-width: 300px;
+  height: 460px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  .gif {
+    position: absolute;
+    top: 23px;
+    z-index: map-get($z-index, "negative");
+
+    img {
+      max-height: 410px !important;
+    }
+  }
+}

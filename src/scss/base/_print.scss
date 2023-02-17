@@ -1,0 +1,39 @@
+@media print {
+  @page:first {
+    margin: 0cm;
+  }
+
+  @page:last {
+    margin: 5cm;
+  }
+
+  @page:left {
+    margin: 2cm 1.5cm 2cm 2cm;
+  }
+
+  @page:right {
+    margin: 2cm 2cm 2cm 1.5cm;
+  }
+  // body style
+  body {
+    color: $dark !important;
+    background: red;
+  }
+
+  // Diasable elements
+  header,
+  footer,
+  .theme-switcher {
+    display: none;
+  }
+
+  // Text
+  p {
+    font-size: 16pt;
+  }
+
+  // Links
+  a:after {
+    content: "(" attr(href) ")";
+  }
+}

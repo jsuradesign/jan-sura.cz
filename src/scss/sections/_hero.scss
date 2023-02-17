@@ -1,0 +1,53 @@
+.hero {
+  height: 100vh;
+  max-height: 100svh;
+  align-items: center;
+  padding-top: 88px;
+  overflow: hidden;
+
+  @include orientation(landscape) {
+    max-height: unset;
+  }
+
+  .leed {
+    @include fluid-type(24px, 40px);
+    font-weight: 200;
+  }
+
+  h1 {
+    @include fluid-type(56px, 124px);
+    line-height: 1;
+  }
+
+  .profile-photo {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    z-index: map-get($z-index, "negative");
+
+    @include orientation(landscape) {
+      display: none;
+    }
+
+    @include respond-up(sm) {
+      left: 20%;
+    }
+
+    @include respond-up(md) {
+      left: 30% !important;
+      @include orientation(landscape) {
+        display: block;
+      }
+    }
+
+    @include respond-up(lg) {
+      left: 40% !important;
+    }
+
+    img {
+      max-height: 105vh;
+      width: auto;
+      opacity: 0.4;
+    }
+  }
+}

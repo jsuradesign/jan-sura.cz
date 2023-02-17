@@ -26,8 +26,8 @@ button {
 
   &:hover,
   &:focus {
-    .icon * {
-      fill: var(--primary);
+    .icon {
+      //   fill: var(--primary);
     }
   }
 }
