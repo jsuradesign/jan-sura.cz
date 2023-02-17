@@ -1,12 +1,7 @@
-header {
-  padding: 24px 0;
-}
-
 .navbar {
   display: flex;
   flex-direction: row;
   align-items: center;
-  //   justify-content: space-between;
 
   .brand {
     font-size: 24px;
@@ -19,6 +14,7 @@ header {
 
 button {
   line-height: 0;
+  cursor: pointer;
 }
 
 .theme-switcher {
@@ -39,10 +35,8 @@ button {
 .menu-toggler {
   width: 40px;
   height: 40px;
-  //   border: 1px solid red;
   background: none;
   border: none;
-  //   border: 1px solid #fff;
 
   &:hover,
   &:focus {

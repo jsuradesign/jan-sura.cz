@@ -24,6 +24,27 @@
   }
 }
 
+html[data-theme="light"] {
+  --primary: #{$primary-light};
+  --body-bg: #{$light};
+  --body-color: #{$dark};
+
+  @for $i from 1 through 4 {
+    --primary-#{$i *100}: #{shade($primary-light, $i * 20)};
+    --primary-n-#{$i *100}: #{tint($primary-light, $i * 20)};
+  }
+
+  .theme-switcher {
+    .icon--sun {
+      display: none;
+    }
+  }
+
+  .bg-body-bg {
+    background-color: var(--body-bg);
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --primary: #{$primary-dark};
@@ -34,6 +55,27 @@
       --primary-#{$i *100}: #{shade($primary-dark, $i * 20)};
       --primary-n-#{$i *100}: #{tint($primary-dark, $i * 20)};
     }
+  }
+}
+
+html[data-theme="dark"] {
+  --primary: #{$primary-dark};
+  --body-bg: #{$dark};
+  --body-color: #{$light};
+
+  @for $i from 1 through 4 {
+    --primary-#{$i *100}: #{shade($primary-dark, $i * 20)};
+    --primary-n-#{$i *100}: #{tint($primary-dark, $i * 20)};
+  }
+
+  .theme-switcher {
+    .icon--moon {
+      display: none;
+    }
+  }
+
+  .bg-body-bg {
+    background-color: var(--body-bg);
   }
 }
 
@@ -57,42 +99,9 @@ body {
   width: 100%;
   min-height: 100vh;
   min-height: -webkit-fill-available;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  position: relative;
 }
 
-.section {
+section {
   position: relative;
-
-  &__hero {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    height: 100vh;
-    margin-top: -88px;
-    // border: 1px solid red;
-
-    img {
-      position: absolute;
-      max-height: 100%;
-      bottom: 0;
-      right: 0;
-      margin-right: -450px;
-      opacity: 0.3;
-      z-index: map-get($z-index, "negative");
-      //   filter: grayscale(100%) drop-shadow(0px 0px 30px var(--dark-300));
-
-      @include respond-up(md) {
-        margin-right: -200px;
-      }
-
-      @include respond-up(lg) {
-        margin-right: -100px;
-      }
-
-      @include respond-up(xl) {
-        margin-right: unset;
-      }
-    }
-  }
 }
