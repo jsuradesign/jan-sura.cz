@@ -1,3 +1,17 @@
+{% import 'src/html/macros/icon.html' as icon %}
+
 <div class="container">
-  <nav>Navigace</nav>
+  <nav class="navbar">
+    <a href="index.html" class="brand">Jan<span class="text-primary fw-bolder">Sůra</span> </a>
+
+    <button class="menu-toggler ml-auto">{{ icon.icon("menu", "24", "body-color", "svg-icon") }} {{ icon.icon("menu-open", "24", "body-color", "svg-icon") }}</button>
+    <button class="theme-switcher">{{ icon.icon("sun", "24", "body-color", "svg-icon") }} {{ icon.icon("moon", "24", "body-color", "svg-icon") }}</button>
+
+    <ul class="navbar-links">
+      <li><a href="#">Link v navigaci</a></li>
+      <li><a href="#">Link v navigaci</a></li>
+      <li><a href="#">Link v navigaci</a></li>
+      <li><a href="#">Link v navigaci</a></li>
+    </ul>
+  </nav>
 </div>
