@@ -16,112 +16,46 @@ h6,
 
 h1,
 .h1 {
-  @include fluid-type(32px, 72px);
+  @include fluid-type(40px, 72px);
 }
 
 h2,
 .h2 {
-  @include fluid-type(24px, 56px);
-}
-
-h3,
-.h3 {
-}
-
-h4,
-.h4 {
-}
-
-h5,
-.h5 {
-}
-
-h6,
-.h6 {
-}
-
-p {
+  @include fluid-type(32px, 64px);
+  margin-bottom: 40px;
 }
 
 // Links
 a {
+  color: var(--link-color);
   text-decoration: none;
-  color: var(--body-color);
 
-  &:hover,
-  &:focus {
-    color: var(--primary);
-    transition: color var(--transition-duration) linear;
+  &:hover {
+    color: var(--link-hover-color);
+    transition: color var(--transotion-duration) linear;
   }
 
-  &:active {
-    color: var(--primary-300);
-  }
-
-  &:visited {
-    color: var(--body-color);
-  }
-}
-
-a:not(nav a, .no-border) {
-  color: var(--body-color);
-  text-decoration: none;
-  position: relative;
-
-  &::after {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 2px;
-    bottom: -1px;
-    left: 0;
-    opacity: 0.5;
-    background: var(--primary);
-    transition: width var(--transition-duration) linear;
-    z-index: map-get($z-index, "negative");
-  }
-
-  &:hover,
-  &:focus {
-    color: var(--primary);
-    transition: color var(--transition-duration) linear;
-
-    &::after {
-      width: 0;
-    }
-  }
-
-  &:active {
-    color: var(--primary-300);
-  }
-
-  &:visited {
-    color: var(--body-color);
-
+  &:has(.icon) {
     &:hover {
-      color: var(--primary);
+      .icon {
+        transition: fill var(--transotion-duration) linear;
+        fill: var(--color-primary);
+      }
     }
   }
 }
 
+// List
 ul {
   list-style: none;
 }
 
-// .big-title {
-//   font-size: 80px;
-//   line-height: 1.3;
+.icon {
+  &--body-color {
+    fill: var(--body-color);
+  }
 
-//   @include respond-up(md) {
-//     line-height: 1;
-//   }
-
-//   @include respond-up(xl) {
-//     font-size: 160px;
-//   }
-
-//   @include respond-up(xxl) {
-//     font-size: 240px;
-//   }
-// }
+  &--color-primary {
+    fill: var(--color-primary);
+  }
+}

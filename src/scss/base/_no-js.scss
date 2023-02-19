@@ -1,0 +1,10 @@
+.no-js {
+  .site-header {
+    @include media-breakpoint-between(tiny, sm) {
+      @include scrollbar(3px, var(--body-color), var(--primary-color), 3px, var(--link-hover-color));
+    }
+  }
+  .theme-switcher {
+    display: none !important;
+  }
+}

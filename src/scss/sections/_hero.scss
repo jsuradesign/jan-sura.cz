@@ -29,25 +29,25 @@
       display: none;
     }
 
-    @include respond-up(sm) {
+    @include media-breakpoint-up(sm) {
       left: 20%;
     }
 
-    @include respond-up(md) {
+    @include media-breakpoint-up(md) {
       left: 30% !important;
       @include orientation(landscape) {
         display: block;
       }
     }
 
-    @include respond-up(lg) {
+    @include media-breakpoint-up(lg) {
       left: 40% !important;
     }
 
     img {
       max-height: 105vh;
       width: auto;
-      opacity: 0.4;
+      opacity: 0.4 !important;
     }
   }
 }

@@ -4,8 +4,11 @@ $gray: #667085;
 $light-gray: #d0d5dd;
 $white: #ffffff;
 $black: #000000;
+
 $primary-dark: #00cc90;
+$primary-dark-darken: darken($primary-dark, 8%);
 $primary-light: #3b42e1;
+$primary-light-darken: darken($primary-light, 25%);
 
 $colors-plate: (
   light: $light,
@@ -86,3 +89,6 @@ $font-size-base: 16px;
 $line-height-base: 1.6;
 $font-weight-normal: normal;
 $font-weight-bold: bold;
+
+$box-shadow-dark-large: rgba(darken($dark, 5%), 0.5);
+$box-shadow-light-large: rgba(darken($light, 10%), 0.5);

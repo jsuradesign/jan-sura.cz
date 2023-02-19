@@ -1,9 +1,28 @@
-header {
+.site-header {
   padding: 24px 0;
   z-index: map-get($z-index, "header");
+  background: var(--body-bg);
+  overflow: hidden !important;
+}
 
-  @supports (position: sticky) {
+@supports (position: sticky) {
+  .sticky {
     position: sticky;
-    top: 0;
+
+    &--top {
+      top: 0;
+    }
+
+    &--right {
+      right: 0;
+    }
+
+    &--bottom {
+      bottom: 0;
+    }
+
+    &--left {
+      left: 0;
+    }
   }
 }

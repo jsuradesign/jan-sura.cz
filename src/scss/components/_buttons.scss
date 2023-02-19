@@ -1,0 +1,33 @@
+.btn {
+  display: block;
+  width: max-content;
+  padding: 12px 24px;
+  line-height: 1;
+  text-decoration: none;
+  border: none;
+  font-weight: 500;
+  border-radius: var(--border-radius-small);
+  background: var(--link-color);
+  color: var(--button-color);
+  box-shadow: var(--box-shadow-small);
+
+  &:hover {
+    background: var(--link-hover-color);
+    transition: all var(--transotion-duration) linear;
+    color: var(--button-color);
+    box-shadow: var(--box-shadow-large);
+  }
+}
+
+.theme-switcher {
+  &:hover {
+    .icon {
+      fill: var(--color-primary);
+      transition: fill var(--transotion-duration) linear;
+    }
+  }
+}
+
+button + button {
+  margin-left: 16px;
+}

@@ -1,68 +1,44 @@
-// Google fonts
-
 // Functions
 @import "functions/strip-unit";
 @import "functions/em";
 @import "functions/rem";
-@import "functions/tint";
 @import "functions/shade";
+@import "functions/tint";
 
 // Variables
 @import "common/variables";
 
 // Mixins
+@import "mixins/theme";
 @import "mixins/respond";
 @import "mixins/orientation";
 @import "mixins/fluid-type";
-@import "mixins/clearfix";
 @import "mixins/selection";
+@import "mixins/clearfix";
+@import "mixins/scrollbar";
 
-// Base
-@import "base/reset";
+// Base styles
 @import "base/global";
 @import "base/typography";
 
 // Components
 @import "components/container";
+@import "components/buttons";
 @import "components/navigation";
 @import "components/jobs";
-@import "components/separator";
-@import "components/icon";
 @import "components/social-links";
-@import "components/animations";
+@import "components/separator";
 
-// Partials
+// Layout partials
 @import "partials/header";
 @import "partials/footer";
 
 // Sections
 @import "sections/hero";
 
-// Pages
-@import "pages/home";
-
 // Utilities
 @import "utilities/utilities";
 
-// Print styles
-@import "base/print";
-
-.phone-wrapper {
-  //   border: 1px solid red;
-  //   max-width: 300px;
-  height: 460px;
-  overflow: hidden;
-  position: relative;
-  display: flex;
-  justify-content: center;
-
-  .gif {
-    position: absolute;
-    top: 23px;
-    z-index: map-get($z-index, "negative");
-
-    img {
-      max-height: 410px !important;
-    }
-  }
-}
+// Other styles
+@import "base/no-js"; // If JavaScript is disabled
+@import "base/print"; // Print styles

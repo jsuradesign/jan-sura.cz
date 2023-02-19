@@ -3,12 +3,14 @@
   width: 100%;
   margin: 0 auto;
   display: block;
+  overflow: hidden;
+  overflow-x: scroll;
 
-  @include respond-up(md) {
+  @include media-breakpoint-up(md) {
     max-width: 80%;
   }
 
-  @include respond-up(xl) {
+  @include media-breakpoint-up(xl) {
     max-width: 70%;
   }
 }

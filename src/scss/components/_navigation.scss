@@ -8,7 +8,15 @@
   }
 
   .navbar-links {
-    display: none;
+    display: none !important;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+
+    a {
+      @extend a;
+      padding: 8px 16px;
+    }
   }
 }
 
@@ -63,8 +71,4 @@ button {
       //   transform: rotate(-45deg);
     }
   }
-}
-
-button + button {
-  margin-left: 16px;
 }
