@@ -25,6 +25,24 @@ h2,
   margin-bottom: 40px;
 }
 
+// h3,
+// .h3 {
+//   @include fluid-type(24px, 56px);
+//   margin-bottom: 40px;
+// }
+
+h4,
+.h4 {
+  @include fluid-type(24px, 40px);
+  margin-bottom: 40px;
+}
+
+h5,
+.h5 {
+  @include fluid-type(16px, 24px);
+  margin-bottom: 40px;
+}
+
 // Links
 a {
   color: var(--link-color);
