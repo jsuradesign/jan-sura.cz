@@ -2,7 +2,7 @@
   padding: 24px 0;
   z-index: map-get($z-index, "header");
   background: var(--body-bg);
-  overflow: hidden !important;
+  //   overflow: hidden !important;
 }
 
 @supports (position: sticky) {
