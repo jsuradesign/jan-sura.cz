@@ -2,8 +2,12 @@
 <html lang="cs" class="no-js">
   <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H6D2SVPQKS"></script>
-    <script>
+    <script
+      async
+      data-cookiecategory="analytics"
+      type="text/plain"
+      src="https://www.googletagmanager.com/gtag/js?id=G-H6D2SVPQKS"></script>
+    <script data-cookiecategory="analytics" type="text/plain">
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
@@ -12,6 +16,15 @@
 
       gtag("config", "G-H6D2SVPQKS");
     </script>
+    <!-- Google Tag Manager -->
+    <script data-cookiecategory="analytics" type="text/plain">
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-TVPTMQD');
+    </script>
+    <!-- End Google Tag Manager -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -69,6 +82,15 @@
     #}
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-TVPTMQD"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <header class="site-header bg-body-bg sticky sticky--top">{% include "src/html/partials/header.html" %}</header>
     <main>{% block content %}{% endblock %}</main>
     <footer>{% include "src/html/partials/footer.html" %}</footer>

@@ -2,7 +2,9 @@ import "../scss/main.scss";
 
 import ThemeSwitcher from "./components/ThemeSwitcher";
 import BlureHeroImage from "./components/BlurHeroImage";
+import CookiesConsent from "./cookieconsent-init";
 
+new CookiesConsent;
 new ThemeSwitcher;
 new BlureHeroImage;
 

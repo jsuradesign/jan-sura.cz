@@ -1,14 +1,29 @@
 import "../../node_modules/vanilla-cookieconsent";
 import "../../node_modules/vanilla-cookieconsent/src/cookieconsent.css";
 
+
+function CookiesConsent() {
 // obtain plugin
-var cc = initCookieConsent();
+let cc = initCookieConsent();
 
 // run plugin with your configuration
 cc.run({
     current_lang: 'cs',
     autoclear_cookies: true,                   // default: false
     page_scripts: true,                        // default: false
+    gui_options: {
+        consent_modal: {
+            layout: 'cloud',               // box/cloud/bar
+            position: 'bottom right',     // bottom/middle/top + left/right/center
+            transition: 'slide',           // zoom/slide
+            swap_buttons: true,            // enable to invert buttons
+        },
+        settings_modal: {
+            layout: 'box',                 // box/bar
+            // position: 'left',           // left/right
+            transition: 'slide'            // zoom/slide
+        }
+    },
 
     // mode: 'opt-in'                          // default: 'opt-in'; value: 'opt-in' or 'opt-out'
     // delay: 0,                               // default: 0
@@ -17,10 +32,10 @@ cc.run({
     // force_consent: false,                   // default: false
     // hide_from_bots: true,                   // default: true
     // remove_cookie_tables: false             // default: false
-    // cookie_name: 'cc_cookie',               // default: 'cc_cookie'
+    cookie_name: 'cc_cookie',               // default: 'cc_cookie'
     // cookie_expiration: 182,                 // default: 182 (days)
     // cookie_necessary_only_expiration: 182   // default: disabled
-    // cookie_domain: location.hostname,       // default: current domain
+    cookie_domain: location.hostname,       // default: current domain
     // cookie_path: '/',                       // default: root
     // cookie_same_site: 'Lax',                // default: 'Lax'
     // use_rfc_cookie: false,                  // default: false
@@ -41,7 +56,63 @@ cc.run({
     languages: {
         "cs": {
             consent_modal: {
-                title: "Cookie Banírek"
+                title: "Informace o cookies",
+                description: "Kliknutím na tlačítko Souhlasím se vším se uloží technické, analytické a marketingové soubory cookie, abychom vám mohli umožnit pohodlné používání stránek, měřit funkčnost našich stránek a cílit na vás reklamu. Své preference můžete snadno upravit kliknutím na Nastavení souborů cookie.",
+                primary_btn: {
+                    text: "Souhlasím se vším",
+                    role: "accept_all"
+                },
+                secondary_btn: {
+                    text: "Nastavení cookies",
+                    role: "settings"
+                }
+            },
+            settings_modal: {
+                title: 'Nastavení cookies',
+                save_settings_btn: 'Uložit nastavení',
+                accept_all_btn: 'Povolit vše',
+                reject_all_btn: 'Zakázat vše',
+                close_btn_label: 'Zavřít',
+                cookie_table_headers: [
+                    {col1: 'Cookie'},
+                    {col2: 'Popis'},
+                ],
+                blocks: [
+                    {
+                        title: "Používáme cookies",
+                        description: "Soubory cookie používáme k analýze údajů o našich návštěvnících, ke zlepšení našich webových stránek, zobrazení personalizovaného obsahu a k tomu, abychom vám poskytli skvělý zážitek z webu. Používáním tohoto webu s tímto používáním souhlasíte."
+                    },
+                    {
+                        title: "Nezbytné soubory cookies",
+                        description: "Tyto soubory cookie jsou nezbytné pro fungování webových stránek, není tedy možné je zakázat. Obvykle se nastavují v reakci na akci, kterou na webu sami provedete, jako je nastavení zabezpečení, přihlášení a vyplňování formulářů. Svůj prohlížeč můžete nastavit tak, aby blokoval soubory cookie nebo o nich zasílal upozornění. Mějte na paměti, že některé stránky nebudou bez těchto souborů fungovat. Tyto soubory cookie neukládají žádné informace, které lze přiřadit konkrétní osobě. Tyto soubory cookie můžeme nastavit my nebo poskytovatelé třetích stran, jejichž služby na webu využíváme.",
+                        toggle: {
+                            value: "necessary",
+                            enabled: true,
+                            readonly: true,
+                        },
+                        cookie_table: [
+                            {
+                                col1: "cc_cookie",
+                                col2: "Vaše nastavení cookies z tohoto webu"
+                            }
+                        ]
+                    },
+                    {
+                        title: "Analytické cookies",
+                        description: "Tyto soubory cookie se používají ke zlepšení fungování webových stránek. Umožňují nám rozpoznat a sledovat počet návštěvníků a sledovat, jak návštěvníci web používají. Pomáhají nám zlepšovat způsob, jakým webové stránky fungují, například tím, že uživatelům umožňují snadno najít to, co hledají. Tyto soubory cookie neshromažďují informace, které by vás mohly identifikovat. Pomocí těchto nástrojů analyzujeme a pravidelně zlepšujeme funkčnost našich webových stránek. Získané statistiky můžeme využít ke zlepšení uživatelského komfortu a k tomu, aby byla návštěva Webu pro vás jako uživatele zajímavější.",
+                        toggle: {
+                            value: "analytics",
+                            enabled: false,
+                            readonly: false
+                        },
+                        cookie_table: [
+                            {
+                                col1: "_ga/_ga*, _gid, _ut*",
+                                col2: "Google Analytics - ukládá a počítá návštěvnost stránek a chování webu."
+                            }
+                        ]
+                    }
+                ]
             }
         },
         'en': {
@@ -121,3 +192,6 @@ cc.run({
         }
     }
 });
+}
+
+export default CookiesConsent;
