@@ -17,6 +17,8 @@
     "vanilla-cookieconsent": "^2.8.9"
   },
   "devDependencies": {
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
     "sass": "^1.58.1",
     "terser": "^5.16.4",
     "vite": "^4.1.1",
