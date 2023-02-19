@@ -1,7 +1,9 @@
+{% import 'src/html/macros/icon.html' as icon %}
 <section class="hero" id="top">
   <div class="container h-100">
     <div class="d-flex flex-col justify-content-center h-100">
       <p class="leed">Ahoj, já jsem</p>
+      <h1>{{testString}}</h1>
       <h1><span class="fw-light">Honza</span><span class="text-primary">Sůra</span></h1>
       <p class="leed">web<span class="fw-bold">kodér</span> & web<span class="fw-bold">designér</span></p>
       {# <a href="#" class="btn btn__primary">Button primary</a> #}
@@ -10,5 +12,9 @@
       <img src="images/profile-photo-two.png" alt="Jan Sůra" id="blure-bg" />
     </div>
   </div>
-  {% include "src/html/components/social-links.html" %}
+  <div class="container">
+    <div class="hero-links">
+      {% include "src/html/components/social-links.html" %} {% include "src/html/components/scroll-down.html" %}
+    </div>
+  </div>
 </section>

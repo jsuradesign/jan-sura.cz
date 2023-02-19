@@ -1,5 +1,17 @@
+{% import 'src/html/macros/icon.html' as icon %}
 <section class="skils" id="dovednosti">
-  <div class="container">
-    <h2>Dovednosti</h2>
+  <div class="container text-center">
+    <h2>Technologický stack</h2>
+    <p class="h5 fw-light">Jazyky, nástroje a technologie které při práci používám.</p>
+  </div>
+  <div class="container mt-5">
+    <div class="d-flex flex-row flex-wrap justify-content-center icons-grid">
+      {% for technology in technologies %}
+      <div class="icon-box" data-description="{{ technology.description }}">
+        <img src="images/{{ technology.icon }}.svg" alt="{{ technology.title }}" />
+        <p class="icon-box__description">{{ technology.title }}</p>
+      </div>
+      {% endfor %}
+    </div>
   </div>
 </section>
