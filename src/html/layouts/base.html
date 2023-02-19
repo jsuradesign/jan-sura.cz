@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="cs" class="no-js">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H6D2SVPQKS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-H6D2SVPQKS");
+    </script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,11 +19,62 @@
     <link rel="icon" href="favicon-dark.ico" type="image/x-icon" />
     <meta name="theme-color" content="#dfe4ed" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#101828" media="(prefers-color-scheme: dark)" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta
+      name="description"
+      content="Tvorba www stránek, webdesignu a grafického designu. Připravím pro vás kreativně zpracované podklady pro Váš web, vizitky, propagační materiály, . . ." />
+    <meta
+      name="keyowrds"
+      content="grafika, webdesign, tvorba webu, Jan Sůra, responzivni, wordpress, html5, css3, levně" />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="all" />
+    <meta name="twitter:card" content="summary" />
+    <meta property="fb:admins" content="100000741361896" />
+    <meta property="og:title" content="Jan Sůra" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Jan Sůra" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:url" content="https://jan-sura.cz" />
+    <meta
+      property="og:description"
+      content="Tvorba www stránek, webdesignu a grafického designu. Připravím pro vás kreativně zpracované podklady pro Váš web, vizitky, propagační materiály, . . ." />
+    <meta property="og:image" content="http://jan-sura.cz/images/og-image.jpg" />
+    <meta property="og:image:secure_url" content="https://jan-sura.cz/images/og-image.jpg" />
+    <meta property="og:image:alt" content="Jan Sůra - Tvorba webu" />
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org/",
+        "@type": "Person",
+        "name": "Jan Sůra",
+        "email": "info@jsuradesign.cz",
+        "image": "images/og-image.png",
+        "jobTitle": "HTML / CSS kodér & UI designér",
+        "telephone": "+420721465375",
+        "url": "https://sura.dev",
+        "sameAs": ["https://www.facebook.com/jan.sura.3", "https://www.linkedin.com/in/jansura/"],
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Hráského 1935",
+          "postalCode": "256 01",
+          "addressLocality": "Benešov u Prahy",
+          "addressRegion": "Česká republika"
+        }
+      }
+    </script>
+    <script>
+      document.documentElement.className = document.documentElement.className.replace("no-js", "js");
+    </script>
+    {#
+    <link rel="stylesheet" href="<path-to-cookieconsent.css>" media="print" onload="this.media='all'" />
+    #}
   </head>
   <body>
-    <header class="bg-body-bg">{% include "src/html/partials/header.html" %}</header>
+    <header class="site-header bg-body-bg sticky sticky--top">{% include "src/html/partials/header.html" %}</header>
     <main>{% block content %}{% endblock %}</main>
     <footer>{% include "src/html/partials/footer.html" %}</footer>
+    {# //
+    <script defer src="<path-to-cookieconsent.js>"></script>
+    #}
     <script type="module" src="js/main.js"></script>
   </body>
 </html>
